@@ -5,7 +5,15 @@
 #    then echo "Must be root to run this"
 #    exit 1
 #fi
+if [ -z "$1" ]
+    printf "specify the network\n"
+    exit 1
+fi
 
+if [ "$1" -ne "uni" || "$1" -ne "home" ]
+    printf "unvalid network\n"
+    exit 1
+fi
 interface="wlp3s0"
 
 #ip link set $interface up
@@ -40,8 +48,5 @@ else
     printf "starting dhcpcd on %s\n" $interface
     #dhcpcd $interface
 fi
-
-
-
 
 exit 0
