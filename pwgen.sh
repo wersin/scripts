@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if [ "$1" = "-h" ]; then
     printf "Usage: `basename "$0"` <length> [amt of passwords]\n"
