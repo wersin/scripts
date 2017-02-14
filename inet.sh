@@ -15,11 +15,11 @@ fi
 if [ "$1" = "uni" ]; then
     #specify lrz or eduroam and start respective services
     printf "uni-network\n"
-    network="eduoram"
+    network="eduroam"
 elif [ "$1" = "home" ]; then
     printf "home-network\n"
     network="home"
-elif [ "$1" = "lrz" ]
+elif [ "$1" = "lrz" ]; then
     printf "lrz-network: will start vpn services\n"
     network="lrz"
 else
