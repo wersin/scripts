@@ -10,7 +10,6 @@ where:
 "
 
 length=8
-#num=1;
 while getopts ':hl:n:' option; do
   case "$option" in
     h) echo "$usage"
@@ -31,13 +30,6 @@ while getopts ':hl:n:' option; do
   esac
 done
 shift $((OPTIND - 1))
-
-if [ "$1" = "-h" ]; then
-    printf "Usage: `basename "$0"` <length> [amt of passwords]\n"
-    printf "<length> the length of the password\n"
-    printf "to display this '-h'\n"
-    exit 1
-fi
 
 #some magic to generate password
 specials="_/%&\^\@!*=\+-"
