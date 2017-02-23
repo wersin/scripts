@@ -10,4 +10,3 @@ ntfsfix /dev/sdb2
 
 mount /dev/sdb2 /mnt/usb01
 
-cd /mnt/usb01
