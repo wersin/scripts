@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+xdotool key alt+l
+sleep 1
+xdotool key alt+h
+xdotool key alt+Return
+
+

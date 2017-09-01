@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+cd /home/mark/tor-browser_en-US
+
+proccess=( $(ps aux | pgrep tor) )
+#proccess_ar=$(echo $proccess | tr ";" "\n")
+#echo $proccess | cut -d$'\n' -f2 
+#tor_pid=( $($proccess | cut -d$'\n' -f2) )
+tor_id=$(xdotool search --name "tor-browser")
+if [ -n $tor_id ]; then
+    printf "tor id %d\n" "$tor_id"
+else
+    printf "not set tor"
+fi
+
+printf "%s\n" "${proccess[2]}"
+#TODO: check that there is a 2
+if [ -n "${proccess[2]}" ]; then
+    printf "is running\n"
+    #kill ${proccess[2]}
+    #xdotool key alt+shift+q
+    #xdotool mousemove 500 500 
+    #xdotool key alt+shift+q
+    #xdotool key alt+;
+    #xdotool key alt+shift+q
+    #xdotool key alt+shift+q
+    #./start-tor-browser.desktop
+else
+    printf "starting new one\n"
+    ./start-tor-browser.desktop
+fi

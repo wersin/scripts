@@ -42,6 +42,7 @@ init()
     ip link set $interface up
     printf "Interface is up.\n"
 
+<<<<<<< HEAD
     #get pid of wpa_supplicant
     wpa_pid="$(ps aux | pgrep wpa)"
 
@@ -56,12 +57,29 @@ init()
         #let error="cant find wpa process"
         printf "no wpa running\n"
     fi
+=======
+#get pid of wpa_supplicant
+wpa_pid=( $(ps aux | pgrep wpa) )
+
+#check if it is running if it is, kill it
+#-n returns if a var is set or not empty string
+if [ -n "$wpa_pid" ]; then
+    #echo $wpa_pid
+    printf "Wpa_supplicant running on %d\n" ${wpa_pid[1]}
+    printf "killing wpa_suppicant %d\n" ${wpa_pid[1]}
+    kill ${wpa_pid[1]}
+else
+    #let error="cant find wpa process"
+    printf "no wpa running\n"
+fi
+>>>>>>> f457c984b882f341c9a93f00ab3d1085dc2487a8
 
     #let user chose which script
     #catch errors coming from wpa_supplicant
     printf "starting wpa_suplicant\n"
     wpa_supplicant -i $interface -c /etc/wpa_supplicant/$network.conf -B
 
+<<<<<<< HEAD
     dhcp_pid="$(ps aux | pgrep dhcpcd)"
 
     if [ -n "$dhcp_pid" ]; then
@@ -86,4 +104,25 @@ main()
 }
 
 main "$@"
+=======
+dhcp_pid="$(ps aux | pgrep dhcpcd)"
+if [ -n "$dhcp_pid" ]; then
+    printf "dhcpcd is running on %s\n" $dhcp_pid
+else
+    printf "starting dhcpcd on %s\n" $interface
+    dhcpcd $interface
+fi
+if [ "$1" = "lrz" ]; then
+    #check if vpnc is running
+    vpnc_pid="$(ps aux | pgrep vpn)"
+    if [ -n "$vpnc_pid" ]; then
+        #kill vpnc
+        printf "kiling vpnc on %s\n" "$vpnc_pid"
+        kill $vpnc_pid
+    fi
+    printf "starting vpn service...\n"
+    sleep 5
+    vpnc /etc/vpnc/lrz.conf
+fi
+>>>>>>> f457c984b882f341c9a93f00ab3d1085dc2487a8
 
