@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 usage="$(basename "$0") [-h] [-l] [-n] -- program to generate random passwords using kernels random number generator.\n
 Default: generates password of length 8
