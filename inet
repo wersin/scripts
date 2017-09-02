@@ -16,7 +16,6 @@ root()
 net_select()
 {
     local __res=$1
-    echo "in net select $1"
     local network=''
     #lrz support and start vpn
     #add more options if needed
@@ -81,7 +80,6 @@ init()
 main()
 {
     root $1
-    echo "in main $1"
     net_select net "$1"
     init $net
     exit 0
