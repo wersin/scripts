@@ -25,10 +25,13 @@ net_select()
         network="eduroam"
     elif [ "$2" == "home" ]; then
         printf "home-network\n"
-        network="home"
+        network="grande"
     elif [ "$2" == "lrz" ]; then
         printf "lrz-network: will start vpn services\n"
         network="lrz"
+    elif [ "$2" == "san" ]; then
+        printf "san-home-network\n"
+        network="san"
     else
         printf "no such network\n"
         exit -1
