@@ -29,9 +29,18 @@ net_select()
     elif [ "$2" == "lrz" ]; then
         printf "lrz-network: will start vpn services\n"
         network="lrz"
+    elif [ "$2" == "bio" ]; then
+        printf "bio\n"
+        network="bio"
+    elif [ "$2" == "glh" ]; then
+        printf "glh\n"
+        network="glh"
     elif [ "$2" == "san" ]; then
-        printf "san-home-network\n"
+        printf "san\n"
         network="san"
+    elif [ "$2" == "alsa" ]; then
+        printf "alsa\n"
+        network="alsa"
     else
         printf "no such network\n"
         exit -1
