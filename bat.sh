@@ -8,3 +8,4 @@ acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 	fi
 }
 
+#acpi -b | awk -F '[,:%]' '{print $2, $3}'
