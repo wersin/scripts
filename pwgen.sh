@@ -17,11 +17,19 @@ usage()
 gen_pw()
 {
     num=$2
+    length=$1
+    if [ -z "$2" ]; then
+        num=8
+    else
+        num="$2"
+    fi
+
+    echo $2
 
     if [ -z ${1+x} ]; then
         length=8
     else
-        length=$1
+        length="$1"
     fi
     #some magic to generate password
     specials="_/%&\^\@!*=\+-"
@@ -64,6 +72,7 @@ main()
         esac
         shift # past argument or value
     done
+    echo $num
     gen_pw $len $num
     exit 0
 }

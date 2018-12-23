@@ -72,7 +72,7 @@ init()
     #let user chose which script
     #catch errors coming from wpa_supplicant
     printf "starting wpa_suplicant\n"
-    wpa_supplicant -i $interface -c /etc/wpa_supplicant/$1.conf -B
+    wpa_supplicant -i $interface -c /etc/wpa_supplicant/$1.conf
 
     dhcp_pid="$(ps aux | pgrep dhcpcd)"
 
