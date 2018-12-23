@@ -24,8 +24,6 @@ gen_pw()
         num="$2"
     fi
 
-    echo $2
-
     if [ -z ${1+x} ]; then
         length=8
     else
@@ -35,9 +33,8 @@ gen_pw()
     specials="_/%&\^\@!*=\+-"
     #password="$(cat /dev/urandom | tr -dc A-Za-z0-9_/%\*_=- | head -c$1)"
     password="$(cat /dev/urandom | tr -dc A-Za-z0-9$specials | head -c$length)"
-
     printf "%s\n" "$password"
-    #TODO: 	pass num as second argumen
+    #TODO: pass num as second argumen/
     if [ -n "$num" ]; then
         for (( i=1; i < $num; i++ ))
         do
@@ -54,25 +51,26 @@ main()
     if [ "$1" == "--help" ] || [ "$1" == "-h" ] || [ -z ${1+x} ]; then
         usage $0
     fi
-
-    while [[ $# -gt 1 ]]
-    do
-        key="$1"
-
-        case $key in
-        -l|--length)
-            len="$2"
+    num=1
+    len=8
+    while getopts ":n:l:" o; do
+    case "${o}" in
+        n)
+            num=${OPTARG}
             ;;
-        -n|--amount)
-            num="$2"
+        l)
+            len=${OPTARG}
             ;;
-            *)
-                    # unknown option
+        *)
+            usage
             ;;
-        esac
-        shift # past argument or value
+    esac
     done
-    echo $num
+    shift $((OPTIND-1))
+
+    if [ -z "${len}" ] || [ -z "${num}" ]; then
+        usage
+    fi
     gen_pw $len $num
     exit 0
 }
