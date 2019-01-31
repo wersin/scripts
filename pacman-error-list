@@ -1,0 +1,23 @@
+/usr/share/glib-2.0/schemas/org.gnome.Epiphany.enums.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.Evince.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.epiphany.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.addressbook.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.bogofilter.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.calendar.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.importer.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.mail.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.attachment-reminder.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.autocontacts.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.email-custom-header.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.external-editor.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.face-picture.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.itip.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.mail-notification.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.prefer-plain.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.publish-calendar.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.plugin.templates.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.shell.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.spamassassin.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+/usr/share/glib-2.0/schemas/org.gnome.evolution.text-highlight.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
+( 6/23) Probing GTK3 input method modules...

@@ -2,6 +2,7 @@
 
 keydown()
 {
+    #xdotool keydown --window "wow.exe" keydown $1
     xdotool keydown --delay 60 $1
     xdotool keyup --delay 60 $1
 }

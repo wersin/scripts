@@ -6,7 +6,6 @@ if [ "$EUID" -ne 0 ]
 fi
 
 #h8 on windows and ntfs
-ntfsfix /dev/sdb2
-
-mount /dev/sdb2 /mnt/usb01
+ntfsfix /dev/sda2
+mount -o gid=wheel /dev/sda2 /mnt/usb01
 
