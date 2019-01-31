@@ -12,7 +12,6 @@ root()
 
 main()
 {
-    #user not necessarily needs to be root
     root $1
     exit 0
 }
