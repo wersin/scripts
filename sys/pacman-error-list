@@ -20,4 +20,3 @@
 /usr/share/glib-2.0/schemas/org.gnome.evolution.shell.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
 /usr/share/glib-2.0/schemas/org.gnome.evolution.spamassassin.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
 /usr/share/glib-2.0/schemas/org.gnome.evolution.text-highlight.gschema.xml:1:1  Error on line 1 char 1: Document was empty or contained only whitespace.  This entire file has been ignored.
-( 6/23) Probing GTK3 input method modules...
