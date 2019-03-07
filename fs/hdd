@@ -1,0 +1,25 @@
+#!/bin/zsh
+#user must be root to run this
+if [ "$EUID" -ne 0 ]
+    then echo "Must be root to run this"
+    exit 1
+fi
+
+lsblk
+echo "Choose drive to mount (e.g. sda1,sdb2,sdd1), followed by [ENTER]:"
+read drive
+
+echo "Mounting $drive"
+
+# get filesystem type
+fs_type=$(lsblk -f | grep $drive |  awk '{print $2}')
+# if ntfs file system
+if [[ $fs_type = "ntfs" ]]
+then
+    echo "Setting up ntfs drive..."
+    ntfsfix /dev/$drive
+fi
+#h8 on windows and ntfs
+mount -o gid=wheel,mark /dev/$drive /home/mark/usb
+echo "Mounting done"
+
